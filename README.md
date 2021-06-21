@@ -1,1 +1,1 @@
-# shop-projrct
+# shop-project
