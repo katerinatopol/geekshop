@@ -2,11 +2,6 @@ from django.db import models
 
 
 class ProductCategory(models.Model):
-    link = models.CharField(
-        verbose_name='ссылка',
-        max_length=64,
-        unique=True
-    )
     name = models.CharField(
         verbose_name='имя',
         max_length=64,
@@ -16,13 +11,13 @@ class ProductCategory(models.Model):
         verbose_name='описание',
         blank=True
     )
+    link = models.TextField(
+        verbose_name='ссылка',
+        blank=True
+    )
 
-    created = models.DateTimeField(
-        auto_now_add=True
-    )
-    updated = models.DateTimeField(
-        auto_now=True
-    )
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name or f"Category with id - {self.pk}"
