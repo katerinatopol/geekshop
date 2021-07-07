@@ -1,0 +1,27 @@
+[
+  {
+      "name": "Все",
+      "description": "",
+      "link": "products_all"
+  },
+  {
+      "name": "Дом",
+      "description": "",
+      "link": "products_home"
+  },
+  {
+      "name": "Офис",
+      "description": "",
+      "link": "products_office"
+  },
+  {
+      "name": "Модерн",
+      "description": "",
+      "link": "products_modern"
+  },
+  {
+      "name": "Классика",
+      "description": "",
+      "link": "products_classic"
+  }
+]
