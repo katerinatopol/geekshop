@@ -11,10 +11,6 @@ class ProductCategory(models.Model):
         verbose_name='описание',
         blank=True
     )
-    link = models.TextField(
-        verbose_name='ссылка',
-        blank=True
-    )
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

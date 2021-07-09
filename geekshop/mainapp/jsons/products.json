@@ -1,25 +1,7 @@
 [
   {
-      "category": "Все",
-      "name": "Красный стул",
-      "image": "product_images/product-4.jpg",
-      "short_desc": "Красивый стул",
-      "description": "",
-      "price": "2300.00",
-      "quantity":  20
-  },
-  {
       "category": "Дом",
       "name": "Другой красный стул",
-      "image": "product_images/product-4.jpg",
-      "short_desc": "Красивый стул",
-      "description": "",
-      "price": "2300.00",
-      "quantity":  20
-  },
-  {
-      "category": "Модерн",
-      "name": "Современный красный стул",
       "image": "product_images/product-4.jpg",
       "short_desc": "Красивый стул",
       "description": "",
