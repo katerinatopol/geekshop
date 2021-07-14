@@ -1,27 +1,18 @@
 [
   {
-      "name": "Все",
-      "description": "",
-      "link": "products_all"
-  },
-  {
       "name": "Дом",
-      "description": "",
-      "link": "products_home"
+      "description": ""
   },
   {
       "name": "Офис",
-      "description": "",
-      "link": "products_office"
+      "description": ""
   },
   {
       "name": "Модерн",
-      "description": "",
-      "link": "products_modern"
+      "description": ""
   },
   {
       "name": "Классика",
-      "description": "",
-      "link": "products_classic"
+      "description": ""
   }
 ]
