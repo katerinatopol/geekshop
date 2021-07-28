@@ -28,7 +28,7 @@ def get_same_products(hot_product):
 
 def products(request, pk=None, page=1):
     title = 'продукты/каталог'
-    basket = get_basket(request.user)
+    # basket = get_basket(request.user)
     # basket = []
     # if request.user.is_authenticated:
     #     basket = Basket.objects.filter(user=request.user)
