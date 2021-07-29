@@ -9,12 +9,12 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import json
 import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-$09g6^3yz!i_q@4@(8)#fde-3xacr7umq06j=)u0uu$=&ugs6a
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -41,7 +40,9 @@ INSTALLED_APPS = [
     'mainapp',
     'authapp',
     'basketapp',
-    'adminapp'
+    'adminapp',
+
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'geekshop.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -87,7 +87,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -107,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -121,14 +119,13 @@ USE_L10N = True
 
 USE_TZ = False
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "geekshop","static"),
+    os.path.join(BASE_DIR, "geekshop", "static"),
     os.path.join(BASE_DIR, "basketapp", "static"),
 )
 
@@ -156,3 +153,15 @@ EMAIL_HOST_USER = '80e6725cd9583b'
 EMAIL_HOST_PASSWORD = '9b12ab3c40d03f'
 EMAIL_PORT = '465'
 EMAIL_USE_TLS = True
+
+# vk_id = '7914275'
+# vk_key = '3UAgUf4w0Phvpx64oSVq'
+# vk_secret = 'a1b375c0a1b375c0a1b375c0a8a1cbb6e3aa1b3a1b375c0c0b1d6d5b436766ed8a41342'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2',
+)
+# если храним секреты в файле vk.json
+with open('geekshop/vk.json', 'r') as file:
+    VK = json.load(file)
